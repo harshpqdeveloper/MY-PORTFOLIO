@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import ArtThumb from './ArtThumb.jsx';
+import { lockPageScroll } from '../lib/motion.js';
 
 function Section({ title, children }) {
   return (
@@ -16,7 +17,7 @@ export default function ProjectDetail({ project, onClose }) {
 
   useEffect(() => {
     const previous = document.activeElement;
-    document.body.style.overflow = 'hidden';
+    const unlockPageScroll = lockPageScroll();
     closeRef.current?.focus();
 
     const onKey = (e) => {
@@ -25,7 +26,7 @@ export default function ProjectDetail({ project, onClose }) {
     window.addEventListener('keydown', onKey);
     return () => {
       window.removeEventListener('keydown', onKey);
-      document.body.style.overflow = '';
+      unlockPageScroll();
       previous?.focus?.();
     };
   }, [onClose]);
@@ -34,7 +35,8 @@ export default function ProjectDetail({ project, onClose }) {
 
   return (
     <div className="modal-backdrop" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
-      <div className="modal" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+      {/* data-lenis-prevent lets the mouse wheel scroll this dialog natively instead of the page behind it. */}
+      <div className="modal" role="dialog" aria-modal="true" aria-labelledby="detail-title" data-lenis-prevent>
         <button ref={closeRef} type="button" className="modal-close" onClick={onClose}>
           Close <span aria-hidden="true">×</span>
         </button>

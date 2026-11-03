@@ -36,6 +36,15 @@ export const profile = {
   },
 };
 
+/**
+ * Swarm cursors: the cursors that orbit the visitor's mouse.
+ * `count` is for mouse screens, `touchCount` for phones and tablets.
+ */
+export const swarmCursors = {
+  count: 12,
+  touchCount: 7,
+};
+
 export const about = {
   paragraphs: [
     "I'm Harsh, a developer who enjoys solving real-world problems through software and automation.",

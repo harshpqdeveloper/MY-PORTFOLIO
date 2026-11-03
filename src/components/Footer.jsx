@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <a href="#top" className="logo" aria-label="Back to top">
-          HARSH<span className="logo-dot">.</span>
+          HARSH
         </a>
         <p className="muted small">
           © {new Date().getFullYear()} {profile.name}. Built with React, GSAP and Lenis.

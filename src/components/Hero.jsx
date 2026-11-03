@@ -14,9 +14,12 @@ export default function Hero() {
 
   return (
     <section id="top" className="hero">
-      <span className="hero-bg" aria-hidden="true" data-parallax>
-        HARSH.
-      </span>
+      {/* The wrapper takes the scroll parallax; the word inside stays centred by CSS at any window size. */}
+      <div className="hero-bg-wrap" aria-hidden="true" data-parallax>
+        <span className="hero-bg">
+          <span className="hero-bg-fill">HARSH</span>
+        </span>
+      </div>
 
       <div className="container hero-inner">
         <div className="hero-copy">

@@ -9,7 +9,7 @@ export default function Navbar() {
     <header className="nav">
       <div className="container nav-inner">
         <a href="#top" className="logo" aria-label="Harsh, back to top" onClick={close}>
-          HARSH<span className="logo-dot">.</span>
+          HARSH
         </a>
 
         <nav id="primary-nav" aria-label="Primary" className={`nav-links ${open ? 'is-open' : ''}`}>

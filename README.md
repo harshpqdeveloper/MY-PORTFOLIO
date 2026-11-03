@@ -51,6 +51,14 @@ To turn it on:
 
 Real screenshots live in `public/work/` as WebP. Projects without a public screenshot use abstract artwork labelled "Project artwork, not a screenshot". To add a real one, put the image in `public/work/` and set the project's `thumb` to `{ type: 'image', src: '/work/your-file.webp', caption: '...' }`.
 
+## Swarm cursors
+
+A swarm of coloured cursors orbits close around the visitor's mouse on every page (`src/components/SwarmCursors.jsx`, original code). Each arrow faces the way it is flying. Run the mouse into one and it is knocked away, tumbling, then flies back into orbit; a click knocks away the ones near it. It is drawn on one canvas that ignores clicks, so every link and button stays clickable.
+
+- Counts: `swarmCursors` in `src/data/profile.js` (`count` for mouse screens, `touchCount` for phones).
+- On phones the swarm orbits the finger and otherwise circles over the big red name.
+- Turned off when the visitor's device asks for reduced motion.
+
 ## Deploy
 
 The build is a static site, so any static host works. On Vercel: import the folder, keep the defaults (Vite, `npm run build`, output `dist`), and add `VITE_CONTACT_ENDPOINT`.

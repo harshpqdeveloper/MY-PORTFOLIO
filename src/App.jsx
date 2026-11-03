@@ -9,6 +9,7 @@ import Experience from './components/Experience.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import Cursor from './components/Cursor.jsx';
+import SwarmCursors from './components/SwarmCursors.jsx';
 import { initMotion } from './lib/motion.js';
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
 
   return (
     <>
+      <SwarmCursors />
       <Cursor />
       <Navbar />
       <main id="main">
