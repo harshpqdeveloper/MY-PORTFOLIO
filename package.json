@@ -1,0 +1,25 @@
+{
+  "name": "harsh-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Harsh — Software Developer & Automation Engineer. Cinematic personal portfolio.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host --port 4173"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.5",
+    "@fontsource/anton": "^5.2.5",
+    "@fontsource/caveat": "^5.2.5",
+    "gsap": "^3.13.0",
+    "lenis": "^1.3.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.5.0",
+    "vite": "^6.3.5"
+  }
+}
